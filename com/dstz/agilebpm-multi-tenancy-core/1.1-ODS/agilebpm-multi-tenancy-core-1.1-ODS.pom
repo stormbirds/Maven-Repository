@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>agilebpm-multi-tenancy</artifactId>
+        <groupId>com.dstz</groupId>
+        <version>1.1-ODS</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>agilebpm-multi-tenancy-core</artifactId>
+
+    <dependencies>
+    	<dependency>
+            <groupId>com.dstz.agilebpm</groupId>
+            <artifactId>base-rest</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dstz.agilebpm</groupId>
+            <artifactId>sys-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dstz</groupId>
+            <artifactId>agilebpm-multi-tenancy-base</artifactId>
+        </dependency>
+		<dependency>
+            <groupId>com.dstz</groupId>
+            <artifactId>agilebpm-component-multi-tenancy</artifactId>
+        </dependency>
+		
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.dstz.agilebpm</groupId>
+            <artifactId>bus-core</artifactId>
+            <version>${agilebpm.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.dstz.agilebpm</groupId>
+            <artifactId>sys-core</artifactId>
+            <version>${agilebpm.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dstz.agilebpm</groupId>
+            <artifactId>wf-act</artifactId>
+            <version>${bpm.version}</version>
+        </dependency>
+        
+        <!-- 添加Tomcat-JDBC依赖 -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>9.0.17</version>
+		</dependency>
+    </dependencies>
+</project>

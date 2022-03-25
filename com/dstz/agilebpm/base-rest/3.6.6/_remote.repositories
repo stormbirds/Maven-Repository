@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Mar 23 15:09:39 CST 2022
+base-rest-3.6.6.jar>rocan-nexus=
+base-rest-3.6.6.pom>rocan-nexus=

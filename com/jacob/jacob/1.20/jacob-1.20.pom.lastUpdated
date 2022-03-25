@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Mar 24 11:59:57 CST 2022
+http\://192.168.1.111\:8081/repository/maven-public/.error=
+http\://192.168.1.111\:8081/repository/maven-public/.lastUpdated=1648094397072
+https\://maven.aliyun.com/repository/public/.error=
+https\://maven.aliyun.com/repository/public/.lastUpdated=1648094397182

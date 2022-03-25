@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.dstz</groupId>
+    <artifactId>agilebpm-multi-tenancy</artifactId>
+    <version>1.1-ODS</version>
+    <modules>
+        <module>agilebpm-multi-tenancy-base</module>
+        <module>agilebpm-component-multi-tenancy</module>
+        <module>agilebpm-multi-tenancy-core</module>
+        <module>agilebpm-multi-tenancy-springboot</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!-- deploy 服务器 -->
+    <distributionManagement>
+        <repository>
+            <id>rocan-nexus</id>
+            <url>http://192.168.1.111:8081/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>rocan-nexus</id>
+            <url>http://192.168.1.111:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>rocan-nexus</id>
+            <url>http://192.168.1.111:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>rocan-nexus</id>
+            <url>http://192.168.1.111:8081/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <com.dstz.agilebpm.multi-tenancy.version>1.1-ODS</com.dstz.agilebpm.multi-tenancy.version>
+        <druid.version>1.2.6</druid.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <springframework.version>5.1.6.RELEASE</springframework.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <commons-lang3.version>3.6</commons-lang3.version>
+        <cn.hutool.version>4.1.10</cn.hutool.version>
+        <agilebpm.version>3.6.6</agilebpm.version>
+        <bpm.version>3.5.19</bpm.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.dstz</groupId>
+                <artifactId>agilebpm-multi-tenancy-base</artifactId>
+                <version>${com.dstz.agilebpm.multi-tenancy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dstz</groupId>
+                <artifactId>agilebpm-component-multi-tenancy</artifactId>
+                <version>${com.dstz.agilebpm.multi-tenancy.version}</version>
+            </dependency>
+            
+            <dependency>
+	            <groupId>com.dstz.agilebpm</groupId>
+	            <artifactId>base-rest</artifactId>
+	            <version>${agilebpm.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.dstz.agilebpm</groupId>
+	            <artifactId>sys-api</artifactId>
+	            <version>${agilebpm.version}</version>
+	        </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${springframework.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-core</artifactId>
+                <version>${cn.hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

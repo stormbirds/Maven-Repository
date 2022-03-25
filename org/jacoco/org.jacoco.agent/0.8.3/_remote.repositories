@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Mar 23 15:13:09 CST 2022
+org.jacoco.agent-0.8.3-runtime.jar>rocan-nexus=
+org.jacoco.agent-0.8.3.pom>rocan-nexus=

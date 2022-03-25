@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.dstz</groupId>
+        <artifactId>agilebpm-multi-tenancy-springboot</artifactId>
+        <version>1.1-ODS</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>agilebpm-multi-tenancy-autoconfigure</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dstz</groupId>
+            <artifactId>agilebpm-component-multi-tenancy</artifactId>
+            <version>${com.dstz.agilebpm.multi-tenancy.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dstz</groupId>
+            <artifactId>agilebpm-multi-tenancy-core</artifactId>
+            <version>${com.dstz.agilebpm.multi-tenancy.version}</version>
+        </dependency>
+    </dependencies>
+</project>
